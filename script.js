@@ -135,6 +135,8 @@ function sortByAlphabet(a, b) {
     return 0;
 }
 
+renderItems(currentState.sort((a, b) => sortByAlphabet(a, b)));
+
 const searchInput = document.querySelector("#search-input");
 const searchButton = document.querySelector("#search-btn");
 
