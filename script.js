@@ -85,6 +85,7 @@ const items = [{
 
 ];
 
+let currentState = [...items];
 const itemsContainer = document.querySelector("#shop-items");
 const itemTemplate = document.querySelector("#item-template");
 const nothingFound = document.querySelector("#nothing-found");
