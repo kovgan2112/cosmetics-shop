@@ -119,7 +119,7 @@ function renderItems(arr) {
     nothingFound.textContent = "";
     itemsContainer.innerHTML = "";
     arr.forEach((item) => {
-        itemsContainer.append(prepareShopItem(item));
+        itemsContainer.append(prepareCosmeticsItem(item));
     });
     if (!arr.lenght) {
         nothingFound.textContent = "Ничего не найдено";
