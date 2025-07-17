@@ -92,7 +92,7 @@ const nothingFound = document.querySelector("#nothing-found");
 
 function prepareCosmeticsItem(cosmeticsItem) {
     const { title, tags, price, img, rating } = cosmeticsItem;
-    const item = itemTemplate.textContent.cloneNode(true);
+    const item = itemTemplate.content.cloneNode(true);
     item.querySelector("h1").textContent = title;
     item.querySelector("img").src = image;
     item.querySelector(".price").textContent = `${price}BYN`;
