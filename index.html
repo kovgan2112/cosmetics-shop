@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://kit.fontawesome.com/3d0521a918.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин косметики Luxvisage</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="#shop-items">Каталог</a>
+            <a href="#" class="logo">LUXVISAGE</a>
+            <a href="#contacts">Контакты</a>
+            <div class="site-search">
+                <input type="search" id="search-input">
+                <button type="button" id="search-btn" class="fa fa-search"></button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="filters">
+            <div class="filters-sort">
+                <label for="sort"></label>
+                <select name="sort" id="sort">
+                    <option selected value="alphabet">По алфавиту</option>
+                    <option value="expensive">Сначала дорогие</option>
+                    <option value="cheap">Сначала дешевые</option>
+                    <option value="rating">Рейтинг</option>   
+                </select>
+            </div>
+        </div>
+        <section id="shop-items"></section>
+        <p id="nothing-found">Ничего не найдено</p>
+    </main>
+    <footer id="contacts" class="container">
+        <div class="social-media">
+            <a href="#"><i class="fa-brands fa-vk"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+    <template id="item-template">
+        <div class="shop-item">
+            <img src="" alt="">
+            <div class="content">
+                <div class="tags"></div>
+                <h1></h1>
+            </div>
+            <div class="footer">
+                <span class="price"></span>
+                <div class="rating"></div>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
