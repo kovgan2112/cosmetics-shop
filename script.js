@@ -2,84 +2,84 @@ const items = [{
         title: "Гель-ламинатор для бровей суперсильной фиксации",
         tags: ["brow"],
         price: 12,
-        img: "./images/brow_laminator",
+        img: "./images/brow_laminator.jpg",
         rating: 4.8,
     },
     {
         title: "Гель для бровей суперсильной фиксации Brow Super Fix 12H",
         tags: ["brow"],
         price: 9,
-        img: "./images/brow_super_fix",
+        img: "./images/brow_super_fix.jpg",
         rating: 4.7,
     },
     {
         title: "Кисть для контуринга и стробинга лица № 12",
         tags: ["face"],
         price: 15,
-        img: "./images/contouring_brush",
+        img: "./images/contouring_brush.jpg",
         rating: 4.6,
     },
     {
         title: "Крем-флюид тональный AQUA veil HYALURON COMPLEX",
         tags: ["face"],
         price: 11,
-        img: "./images/foundation_aqua_veil",
+        img: "./images/foundation_aqua_veil.jpg",
         rating: 4.9,
     },
     {
         title: "КРЕМ ТОНАЛЬНЫЙ CC ACTIVE COMPLEX SPF 10",
         tags: ["face"],
         price: 8,
-        img: "./images/foundation_cc_active",
+        img: "./images/foundation_cc_active.jpg",
         rating: 4.8,
     },
     {
         title: "Крем тональный Skin EVOLUTION soft matte blur effect",
         tags: ["face"],
         price: 10,
-        img: "./images/foundation_skin_evolution",
+        img: "./images/foundation_skin_evolution.jpg",
         rating: 4.8,
     },
     {
         title: "Матовый блеск для губ PIN UP Ultra matt",
         tags: ["face", "lips"],
         price: 10,
-        img: "./images/lip_gloss_PIN_UP",
+        img: "./images/lip_gloss_PIN_UP.jpg",
         rating: 4.5,
     },
     {
         title: "КАРАНДАШ ДЛЯ ГУБ SOFT MATTE",
         tags: ["face", "lips"],
         price: 7,
-        img: "./images/LIP_PENCIL_SOFT_MATTE",
+        img: "./images/LIP_PENCIL_SOFT_MATTE.jpg",
         rating: 4.3,
     },
     {
         title: "Тинт для губ с гиалуроновым комплексом",
         tags: ["face", "lips"],
         price: 8,
-        img: "./images/lip_tint",
+        img: "./images/lip_tint.jpg",
         rating: 4.9,
     },
     {
         title: "Тушь для ресниц Smoky eyes Эффект умножения и удлинения",
         tags: ["face", "eyes"],
         price: 10,
-        img: "./images/mascara_smoky_eyes",
+        img: "./images/mascara_smoky_eyes.jpg",
         rating: 4.0,
     },
     {
         title: "Тушь для ресниц XXL Суперобъем",
         tags: ["face", "eyes"],
         price: 11,
-        img: "./images/mascara_xxl",
+        img: "./images/mascara_xxl.jpg",
         rating: 4.2,
     },
     {
         title: "Кисть для пудровых текстур веер MAXI № 19",
         tags: ["face"],
         price: 14,
-        img: "./images/Powder_Brush",
+        img: "./images/Powder_Brush.jpg",
         rating: 4.5,
     }
 
@@ -94,7 +94,7 @@ function prepareCosmeticsItem(cosmeticsItem) {
     const { title, tags, price, img, rating } = cosmeticsItem;
     const item = itemTemplate.content.cloneNode(true);
     item.querySelector("h1").textContent = title;
-    item.querySelector("img").src = image;
+    item.querySelector("img").src = img;
     item.querySelector(".price").textContent = `${price}BYN`;
 
     const ratingContainer = item.querySelector(".rating");
@@ -121,7 +121,7 @@ function renderItems(arr) {
     arr.forEach((item) => {
         itemsContainer.append(prepareCosmeticsItem(item));
     });
-    if (!arr.lenght) {
+    if (!arr.length) {
         nothingFound.textContent = "Ничего не найдено";
     }
 }
